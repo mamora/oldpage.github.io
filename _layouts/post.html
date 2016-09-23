@@ -10,6 +10,14 @@ notes: active
   {% endfor %}
 </ul>
 
+<!-- Title and Date -->
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">
+    <svg class="icon-calendar"></svg>
+    {{ page.date | date_to_long_string }}
+  </span>
+{{ content }}
 
 <div class="notes">
 		<div class="note single">

@@ -14,6 +14,11 @@ notes: active
 			<div class="notebody">
 				{{ content }}
 			</div>
+			<ul class="tags">
+  {% for tag in page.tags %}
+    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
 			<!-- Post info -->
 			<div class="noteinfo">
 			<!-- include some categories and tags maybe? -->

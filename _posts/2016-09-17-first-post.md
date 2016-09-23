@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tag_index
 title: "Marcelo Mora, Launches Site"
 date: 2016-09-17
 taq: test

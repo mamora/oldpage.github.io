@@ -1,4 +1,6 @@
 name: Marcelo Mora
 markdown: kramdown
 
+tagline: ''
+
 permalink: /blog/:year/:month/:day/:title

@@ -41,3 +41,20 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+.post-tag{
+    display: inline-block;
+	font-size: 90%;
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 5px;
+    background: #e7f2f7;
+    color: #6a9fb5;
+}
+.post-tag:before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: .5em;
+	padding-left:  .5em;
+	color: #618cd1;
+    font-size: 18px;
+    padding-right: 0.5em;
+}

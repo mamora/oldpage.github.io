@@ -3,6 +3,57 @@ layout: default
 notes: active
 ---
 <html>
+
+<style>
+	p {
+    font-size: 16px;
+    font-family: Monospace;
+  }
+  pre .operator,
+pre .paren {
+ color: rgb(104, 118, 135)
+}
+
+pre .literal {
+ color: #990073
+}
+
+pre .number {
+ color: #099;
+}
+
+pre .comment {
+ color: #998;
+ font-style: italic
+}
+
+pre .keyword {
+ color: #900;
+ font-weight: bold
+}
+
+pre .identifier {
+ color: rgb(0, 0, 0);
+}
+
+pre .string {
+ color: #d14;
+}
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+
+</style>
+
 <div class="notes">
 		<div class="note single">
 			<h1 class="title">{{ page.title }}</h1>
@@ -13,6 +64,7 @@ notes: active
     {% for tag in page.tags %}
                <span class="post-tag"><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></span>
     {% endfor %}
+	      </div>
 			<!-- Post content -->
 			<div class="notebody">
 				{{ content }}

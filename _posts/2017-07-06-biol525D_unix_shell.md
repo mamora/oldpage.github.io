@@ -19,6 +19,14 @@ I will divide this commands in
 
 ```bash
 
+bash #open bash shell terminal
+
+~/.bashrc #file to add paths of programs by default
+
+PATH=/Linux/bin/bwa-0.7.15:$PATH #add program path 
+
+alias bwa="bwa-0.7.15" #use alias to control which program version to use
+
 pwd #print working directory o whereamI
 
 mkdir #make directory
@@ -70,6 +78,71 @@ whatevercommand file.txt >> newfile.txt # concatenate
 cat "new file.txt" #files with spaces have to include ""
 
 wc -l *.pdb | sort -n | head -n 1 #use pipes, in pipes the data stays in RAM memory. It is faster than storing in disk memmory 
+
+```
+
+#sed, awk and cut
+
+
+```bash
+
+
+ sed '3q;d' remix.line.csv > t.txt #select 3th line in a table and save it in a file
+
+
+#script 
+
+input=$1
+output=$2
+
+#get rows that are interesting and merge them into a file
+
+sed 's/gi|162960935|ref|NC_007146.2|pilon/NP/g' $input.csv \ #replace pubmed id number with word "NP"
+| sed 's/gi|16271976|ref|NC_000907.1|pilon/KW20/g'  \  #replace pubmed id number with word "KW20"
+| sed 's/gi|148826757|ref|NC_009567.1|pilon/PittGG/g' \  #replace pubmed id number with word "PittGG"
+| sed -i '/PittGG/d' > ../tables/$output.csv  # delete all lines with PittGG word
+
+
+awk '{print $1,$4,$7,$8}' $x >> ~/uptake/temp/$2 #print specific columns and put them in a file 
+
+
+prefix=`basename $sample .t.span.gz`
+
+zcat temp/$prefix.t.span.gz | awk '$1 == "gi|162960935|ref|NC_007146.2|pilon" && $4 == "gi|162960935|ref|NC_007146.2|pilon"' >> temp/$prefix.t2.span.gz #extract lines in which columns 1 and 4 match a pubmed id
+
+zcat temp/$prefix.t.span.gz | awk '$9 == "+" && $10 == "-"' | awk '$6  - $3 < 1000' >> temp/$prefix.t2.span.gz  # extract lines that column 9 matches a + and column 10 a - and then those in which the product of column 6 and 3 is less than a 1000
+
+zcat temp/$prefix.t.span.gz | awk '$9 == "-" && $10 == "+"' | awk '$5  - $2 < 10'>> temp/$prefix.t2.span.gz | gzip > bedpe/$prefix.span.gz
+
+
+# script to select a value or element in a string, separated by ","
+
+for num in $1
+do
+i=$2
+cat $1 | cut -d "," -f ${i}
+done
+
+```
+
+
+
+# screen
+
+
+```bash
+
+screen #open screen
+
+screen -S name #create a new screen
+
+screen -r name #return to your screen, it must be deattached first
+
+screen -d name #deattach screen 
+
+control-a-n #change screens
+
+echo $STY  #check which screen am I connected
 
 ```
 

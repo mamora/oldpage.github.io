@@ -1,31 +1,158 @@
 
 <!DOCTYPE html>
 	<html>
+	<style>
+	.masthead {
+    position: relative;
+    border-bottom: 1px solid #f2f3f3;
+    z-index: 20;
+}
+.masthead_inner-wrap {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    padding: 1em 1em 1em;
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+}
+
+div {
+    display: block;
+}
+
+.topbar {
+    position: relative;
+    min-width: 250px;
+    background: #272424;
+}
+
+.topbar a {
+    display: block;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+.sidebar {
+    transform: translate3d(0, 0, 0);
+    clear: both;
+    margin-bottom: 1em;
+}
+@media (min-width: 57.8125em)
+main.css:1
+.sticky {
+    position: sticky;
+    top: 2em;
+}
+@media (min-width: 57.8125em)
+main.css:1
+.author__avatar {
+    display: block;
+    width: auto;
+    height: auto;
+}
+main.css:1
+.author__avatar {
+    display: table-cell;
+    vertical-align: top;
+}
+main.css:1
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.author__name {
+    margin-top: 10px;
+}
+.page__footer {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    clear: both;
+    margin-top: 3em;
+    color: #9ba1a6;
+    -webkit-animation: intro 0.3s both;
+    animation: intro 0.3s both;
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+    background-color: #f2f3f3;
+    border-top: 1px solid #bdc1c4;
+}
+.page__footer-copyright {
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size: .6875em;
+}
+	</style>
+	
 		<head>
-			<title>{{ page.title }}</title>
+			<title>Marcelo Mora's webpage</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
-		     <img class="image-box" src="/pics/downtown.jpg" style = "width: 700px; height: 300px">	 
-		 
-		  <nav class="topbar" , "group">
+		     <div class="masthead"> 	 
+		     <div class="masthead_inner-wrap">
+			 <div class="masthead__menu">
+			 
+		  <nav id= "site-nav" class="topbar" , "group">
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
 		        	<li><a href="/about">About</a></li>
 	        		<li><a href="/links">links</a></li>
 	        		<li><a href="/blog">Blog</a></li>
 	    		</ul>
-			</nav>				 
+			</nav>
+			  </div>
+			  </div>
+              </div>
+         <div class:="sidebar sticky">
+         <div >
+
+<div itemscope="" itemtype="http://schema.org/Person">
+<div class="author__avatar"> 
+<img src="https://academicpages.github.io/images/profile.png" class="author__avatar" alt="Your Sidebar Name">
+</div>
+<div class="author__content">
+<h3 class="author__name">Marcelo Mora</h3>
+<p class="author__bio">
+PhD candidate at UBC.
+Researcher, working at DNA uptake of natural transformable bacteria
+Soccer fan, love arts, teaching and Aikido 
+ </p>
+</div>
+<div class="author__urls-wrapper"> 
+<button class="btn btn--inverse">Follow</button>
+<ul class="author__urls social-icons">
+<li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> 
+Location
+</li>
+<li><a href="https://twitter.com/Biology_padawan"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+<li><a href="https://github.com/mamora"><i class="fa fa-fw fa-github" aria-hidden="true"></i>Github</a>
+</li>
+<li><a href="https://www.researchgate.net/profile/Marcelo_Mora2"><i class="ai ai-google-scholar-square ai-fw"></i> Research Gate</a></li>
+</ul>
+</div>
+</div>
+		 
               <p> Hi, my name is Marcelo Mora. I am a grad student at University of British Columbia  </p>		
                                        <p>   Welcome to my site!  </p>	
          <p> This is my page contains my personal thoughts about science, life and other topics I find interesting  </p>
 		 <p> This page is also meant to be my personal compilation of notes and resources about bioinformatics and programming </p> 
-		<footer>
+<div class="page__footer">
+		 <footer>
 	    		<ul>
 	        		<li><a href="mailto:marceloandres.mora@gmail.com">email</a></li>
 	        		<li><a href="https://github.com/mamora">github</a></li>
 				</ul>
-			</footer>
+<div class="page__footer-copyright">
+© 2017 Marcelo Mora. Powered by 
+<a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> 
+&amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
+, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>
+.
+</div>		
+		</footer>
+</div>
 		</body>
 	</html>
